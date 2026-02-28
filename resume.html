@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Power // Resume</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-main: #cccccc;
+            --accent: #4caf50;
+            --border: #333333;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            padding: 2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+        }
+        /* Navigation Menu */
+        nav {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        /* Terminal Effects */
+        .prompt::before {
+            content: "guest@dylan-portfolio:~$ ";
+            color: var(--accent);
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background-color: var(--accent);
+            vertical-align: text-bottom;
+            margin-left: 5px;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        /* Content Box */
+        .content-block {
+            background-color: #1a1a1a;
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+        .resume-section {
+            margin-bottom: 2rem;
+        }
+        .job-title {
+            color: var(--accent);
+            font-size: 1.1rem;
+            margin-bottom: 0.2rem;
+        }
+        .job-meta {
+            color: #888888;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            border-bottom: 1px dashed #444;
+            padding-bottom: 0.5rem;
+        }
+        ul {
+            padding-left: 1.5rem;
+        }
+        li {
+            margin-bottom: 0.5rem;
+        }
+        .system-msg {
+            color: #666666;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+        .download-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            border-radius: 2px;
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            background-color: var(--accent);
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">[ ./home ]</a>
+        <a href="resume.html" style="color: #ffffff; text-decoration: underline;">[ ./resume ]</a>
+        <a href="projects.html">[ ./projects ]</a>
+        <a href="contact.html">[ ./contact ]</a>
+        <a href="the-crew.html">[ ./the_crew ]</a>
+    </nav>
+
+    <h1 class="prompt">cat experience.log<span class="cursor"></span></h1>
+
+    <div class="content-block">
+        
+        <div class="resume-section">
+            <h2>// Experience</h2>
+            
+            <div class="job-title">IT Administrator</div>
+            <div class="job-meta">Public Power District | Nebraska</div>
+            <ul>
+                <li>Administer and maintain critical utility infrastructure, ensuring high availability of secure networks.</li>
+                <li>Manage and support field radio systems and Advanced Metering Infrastructure (AMI) for reliable power distribution monitoring.</li>
+                <li>Design and deploy virtualized server environments (VMs/Hypervisors) to optimize system resources and uptime.</li>
+                <li>Develop and implement Python scripts for data analytics, automating operational reporting and system monitoring.</li>
+            </ul>
+
+            <br>
+
+            <div class="job-title">Systems Administrator</div>
+            <div class="job-meta">Community Hospital | Nebraska</div>
+            <ul>
+                <li>Managed secure, HIPAA-compliant IT networks to support critical healthcare delivery and hospital operations.</li>
+                <li>Led technical uplift initiatives, including comprehensive PC maintenance, network upgrades, and hardware lifecycle management.</li>
+                <li>Provided high-level technical support and training for hospital staff, bridging the gap between medical professionals and enterprise technology.</li>
+            </ul>
+        </div>
+
+        <div class="resume-section">
+            <h2>// Education</h2>
+            
+            <div class="job-title">Bachelor of Science, Health Informatics & Information Systems</div>
+            <div class="job-meta">Fort Hays State University | Anticipated Graduation</div>
+            <ul>
+                <li><strong>Specialization:</strong> Certificate in Networking</li>
+                <li><strong>Relevant Focus:</strong> Network architecture, data communications, and healthcare IT infrastructure.</li>
+            </ul>
+        </div>
+
+        <div class="resume-section">
+            <h2>// Core Competencies</h2>
+            <p>Virtualization (Proxmox/Hypervisors) • Python & Data Analytics • Network Architecture • Radio & AMI Systems • Linux Server Administration • Healthcare IT Operations</p>
+        </div>
+
+        <a href="#" class="download-btn">>> Download Full Resume [PDF]</a>
+
+    </div>
+
+    <p class="system-msg">// End of log.</p>
+
+</body>
+</html>

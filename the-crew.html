@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Power // The Crew</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --text-main: #cccccc;
+            --accent: #4caf50;
+            --border: #333333;
+        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Consolas', 'Courier New', Courier, monospace;
+            padding: 2rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1, h2, h3 {
+            color: #ffffff;
+            font-weight: normal;
+            margin-bottom: 0.5rem;
+        }
+        /* Navigation Menu */
+        nav {
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+        nav a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        /* Terminal Effects */
+        .prompt::before {
+            content: "guest@dylan-portfolio:~$ ";
+            color: var(--accent);
+        }
+        .cursor {
+            display: inline-block;
+            width: 10px;
+            height: 1.2em;
+            background-color: var(--accent);
+            vertical-align: text-bottom;
+            margin-left: 5px;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        /* Content Box */
+        .content-block {
+            background-color: #1a1a1a;
+            border: 1px solid var(--border);
+            padding: 2rem;
+            border-radius: 4px;
+            margin-bottom: 2rem;
+        }
+        /* Crew Member Layout */
+        .crew-member {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px dashed var(--border);
+        }
+        .crew-member:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .img-placeholder {
+            width: 120px;
+            height: 120px;
+            background-color: #0c0c0c;
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.8rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+        /* When you add real images, use this class on the <img> tag instead */
+        .crew-photo {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border: 1px solid var(--accent);
+            flex-shrink: 0;
+        }
+        .crew-details h3 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.1rem;
+        }
+        .system-msg {
+            color: #666666;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">[ ./home ]</a>
+        <a href="resume.html">[ ./resume ]</a>
+        <a href="projects.html">[ ./projects ]</a>
+        <a href="contact.html">[ ./contact ]</a>
+        <a href="the-crew.html" style="color: #ffffff; text-decoration: underline;">[ ./the_crew ]</a>
+    </nav>
+
+    <h1 class="prompt">cat /opt/homelab/roster.txt<span class="cursor"></span></h1>
+
+    <div class="content-block">
+        <h2>// Active Nodes (The Support Crew)</h2>
+        <p>This infrastructure is dedicated to high-availability homelabs, robust network administration, and premium pet management.</p>
+        
+        <br>
+
+        <div class="crew-member">
+        <img src="images/jim.jpg" alt="Jimmy the Cat" class="crew-photo">
+            <div class="crew-details">
+                <h3>Node 01: Jimmy</h3>
+                <p><strong>Hardware:</strong> Heavyweight Chassis<br>
+                <strong>Status:</strong> Critical mass achieved. Highly sociable interface that loves interacting with users. Requires significant bandwidth for treats.</p>
+            </div>
+        </div>
+
+        <div class="crew-member">
+          <img src="images/steve.jpg" alt="Steve the Cat" class="crew-photo">
+            <div class="crew-details">
+                <h3>Node 02: Steve</h3>
+                <p><strong>Hardware:</strong> Standard Feline Unit<br>
+                <strong>Status:</strong> Stealth mode enabled. Highly timid. Primarily monitors network traffic from a secure, hidden location behind the server rack.</p>
+            </div>
+        </div>
+
+        <div class="crew-member">
+            <img src="images/seamus.jpg" alt="Seamus the Cat" class="crew-photo">
+            <div class="crew-details">
+                <h3>Node 03: Seamus Finnegan O'Malley</h3>
+                <p><strong>Hardware:</strong> Legacy System<br>
+                <strong>Status:</strong> Older model running smoothly. Uptime remains high, provided he is stationed at the primary snuggle terminal for thermal regulation.</p>
+            </div>
+        </div>
+
+        <div class="crew-member">
+            <img src="images/luna.jpg" alt="Luna the Dog" class="crew-photo">
+            <div class="crew-details">
+                <h3>Node 04: Luna</h3>
+                <p><strong>Hardware:</strong> Black Bordoodle (Border Collie/Goldendoodle)<br>
+                <strong>Status:</strong> Extremely spunky and loving protocols active. However, onboard logic processing power is occasionally lacking. Enthusiastic execution overrides system intelligence.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="system-msg">// End of roster.</p>
+
+</body>
+</html>
